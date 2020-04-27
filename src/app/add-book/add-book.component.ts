@@ -9,7 +9,7 @@ import { BookService } from '../services/book.service';
 })
 export class AddBookComponent implements OnInit {
 
-@Input() newBook: Book = {
+  newBook: Book = {
 
     isbn: '',
     title: '',
@@ -23,8 +23,8 @@ export class AddBookComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  add(){
+  add() {
     this.service.addBook(this.newBook);
-    
+
   }
 }

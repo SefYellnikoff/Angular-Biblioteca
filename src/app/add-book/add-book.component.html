@@ -1,25 +1,24 @@
 <p>Aggiungi Libro</p>
 
 <div>
-    <label>Titolo:
-      <input [(ngModel)]="newBook.title" type="text" placeholder="title"/>
-    </label>
-    <label>ISBN:
-      <input [(ngModel)]="newBook.isbn" type="text" placeholder="isbn"/>
-    </label>
-    <label>Autore:
-      <input [(ngModel)]="newBook.author" type="text" placeholder="author"/>
-    </label>
-    <label>Editore:
-      <input [(ngModel)]="newBook.publisher" type="text" placeholder="publisher"/>
-    </label>
-    <label>Data di pubblicazione:
-      <input [(ngModel)]="newBook.publicationDate" type="date"  value="2020-04-26"
-       min="1700-01-01" max="2023-12-31" placeholder="publicationDate"/> <br>
-    </label>
+    <label for="title">Titolo: </label>
+    <input [(ngModel)]="newBook.title" type="text" placeholder="title" />
+
+    <label for="isbn">ISBN:</label>
+    <input [(ngModel)]="newBook.isbn" type="text" placeholder="isbn" />
+
+    <label for="author">Autore:</label>
+    <input [(ngModel)]="newBook.author" type="text" placeholder="author" />
+
+    <label for="publisher">Editore:</label>
+    <input [(ngModel)]="newBook.publisher" type="text" placeholder="publisher" />
+
+    <label for="publicationDate">Data di pubblicazione:</label>
+    <input [(ngModel)]="newBook.publicationDate" type="date" value="2020-04-26" min="1700-01-01" max="2023-12-31" placeholder="publicationDate" /> <br>
+
     <br>
-    <label>Copertina:
-      <input [(ngModel)]="newBook.coverUrl" type="text" placeholder="coverUrl"/> <br>
-    </label>
+    <label for="coverUrl">Copertina:</label>
+    <input [(ngModel)]="newBook.coverUrl" type="text" placeholder="coverUrl" /> <br>
+
     <input (click)="add()" type="button" value="Aggiungi libro" />
 </div>
