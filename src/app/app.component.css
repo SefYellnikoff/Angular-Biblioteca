@@ -10,6 +10,7 @@ h6 {
 .blink {
     animation: blink 12s infinite;
     -webkit-animation: blink 12s infinite;
+    margin-top: 50px;
 }
 
 @-webkit-keyframes blink {
