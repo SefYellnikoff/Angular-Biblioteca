@@ -1,5 +1,5 @@
- {{ titleBookList | uppercase }}
-<div>
+<h6 class="title">{{ titleBookList }} </h6>
+<!--<div>
     <div>
         <div *ngFor="let a of books">
             <img [src]="a.coverUrl">
@@ -10,4 +10,21 @@
         </div>
     </div>
 
+</div>-->
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let a of books" class="col-3 d-flex align-items-stretch">
+
+            <div style="width: 200px;" class="  card border-warning mb-33">
+                <img [src]="a.coverUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text ">
+                        <span class="text"><span class="head"> Titolo del Libro:</span> {{ a.title }} </span> <br>
+                        <span class="text"><span class="head">Autore:</span> {{ a.author }} </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

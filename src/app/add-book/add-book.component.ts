@@ -16,7 +16,7 @@ export class AddBookComponent implements OnInit {
     author: '',
     publisher: '',
     publicationDate: new Date(),
-    coverUrl: ''
+    coverUrl: 'https://marketplace.canva.com/cI4v0/MADyRacI4v0/1/s2/canva-opened-book-MADyRacI4v0.jpg'
   }
 
   constructor(private service: BookService) { }
