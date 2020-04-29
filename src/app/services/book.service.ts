@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../models/Book';
+import { of, Observable } from 'rxjs';
 
+  
   var books = [
   {
     isbn: '1234',
@@ -44,15 +46,17 @@ import { Book } from '../models/Book';
 })
 export class BookService {
   book: Book;
+  selectedBook :Book;
 
   constructor() { }
 
-  getBooks(): Book[] {
-    return books;
+  getBooks(): Observable <Book[]> {
+    return of(books);
   }
 
   addBook(book: Book): void {
     books.push(book);
   }
   
+   
 }

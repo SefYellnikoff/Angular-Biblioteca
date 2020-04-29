@@ -1,0 +1,35 @@
+<div *ngIf="service.selectedBook" class="container">
+    <p class="text">Modifica Libro</p>
+    <div class="box">
+        <div class="input-container">
+            <input [(ngModel)]="service.selectedBook.title" type="text" class="radius" placeholder="Titolo:" />
+            <label class="text-center" for="title">Titolo: </label>
+        </div>
+
+        <div class="input-container">
+            <input [(ngModel)]="service.selectedBook.isbn" class=" radius" type="text" placeholder="ISBN:">
+            <label class="text-center" for="isbn">ISBN:</label>
+        </div>
+
+        <div class="input-container">
+            <input [(ngModel)]="service.selectedBook.author" class="radius" type="text" placeholder="Autore:" />
+            <label class="text-center" for="author">Autore:</label>
+        </div>
+
+        <div class="input-container">
+            <input [(ngModel)]="service.selectedBook.publisher" class="radius" type="text" placeholder="Editore" />
+            <label class="text-center" for="publisher">Editore:</label>
+        </div>
+
+        <div class="input-container">
+            <input [(ngModel)]="service.selectedBook.publicationDate" class="radius" type="date" value="2020-04-26" min="1700-01-01" max="2023-12-31" placeholder="Data di pubblicazione" />
+            <label class="text-center" for="publicationDate">Data di pubblicazione:</label>
+        </div>
+
+        <div class="input-container">
+            <input [(ngModel)]="service.selectedBook.coverUrl" class="radius" type="text" placeholder="coverUrl" />
+            <label class="text-center" for="coverUrl">Copertina:</label>
+        </div>
+        <input (click)="save()" type="button" class="radius btn" value="Salva modifiche" />
+    </div>
+</div>

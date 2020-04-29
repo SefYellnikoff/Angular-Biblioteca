@@ -1,16 +1,5 @@
 <h6 class="title">{{ titleBookList }} </h6>
-<!--<div>
-    <div>
-        <div *ngFor="let a of books">
-            <img [src]="a.coverUrl">
-            <br>
-            <span>Titolo: {{ a.title }} </span>
-            <span>Autore: {{ a.author }} </span>
 
-        </div>
-    </div>
-
-</div>-->
 
 <div class="container">
     <div class="row">
@@ -22,6 +11,7 @@
                     <p class="card-text ">
                         <span class="text"><span class="head"> Titolo del Libro:</span> {{ a.title }} </span> <br>
                         <span class="text"><span class="head">Autore:</span> {{ a.author }} </span>
+                        <input (click)="editBook(a)" type="button" class="radius btn" value="Modifica" />
                     </p>
                 </div>
             </div>
