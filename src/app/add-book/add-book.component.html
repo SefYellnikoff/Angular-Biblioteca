@@ -5,25 +5,29 @@
         <div class="input-container">
             <input [(ngModel)]="newBook.title" type="text" class="radius" placeholder="Titolo:" />
             <label class="text-center" for="title">Titolo: </label>
+            <div class="error">{{ errors.title }}</div>
         </div>
 
         <div class="input-container">
             <input [(ngModel)]="newBook.isbn" class=" radius" type="text" placeholder="ISBN:">
             <label class="text-center" for="isbn">ISBN:</label>
+            <div class="error">{{ errors.isbn }}</div>
         </div>
 
         <div class="input-container">
             <input [(ngModel)]="newBook.author" class="radius" type="text" placeholder="Autore:" />
             <label class="text-center" for="author">Autore:</label>
+            <div class="error">{{ errors.author }}</div>
         </div>
 
         <div class="input-container">
             <input [(ngModel)]="newBook.publisher" class="radius" type="text" placeholder="Editore" />
             <label class="text-center" for="publisher">Editore:</label>
+            <div class="error">{{ errors.publisher }}</div>
         </div>
 
         <div class="input-container">
-            <input [(ngModel)]="newBook.publicationDate" class="radius" type="date" value="2020-04-26" min="1700-01-01" max="2023-12-31" placeholder="Data di pubblicazione" />
+            <input [(ngModel)]="newBook.publicationDate" class="radius" type="date" value="2020-04-26" min="1700-01-01" max="2023-12-31" placeholder="Data di pubblicazione" required />
             <label class="text-center" for="publicationDate">Data di pubblicazione:</label>
         </div>
 

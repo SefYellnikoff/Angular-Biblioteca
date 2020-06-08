@@ -10,8 +10,9 @@
                 <div class="card-body">
                     <p class="card-text ">
                         <span class="text"><span class="head"> Titolo del Libro:</span> {{ a.title }} </span> <br>
-                        <span class="text"><span class="head">Autore:</span> {{ a.author }} </span>
-                        <input (click)="editBook(a)" type="button" class="radius btn" value="Modifica" />
+                        <span class="text"><span class="head">Autore:</span> {{ a.stars }} </span>
+                        <button type="button" (click)="editBook(a)" class="radius btn" value="Modifica">Modifica </button>
+
                     </p>
                 </div>
             </div>

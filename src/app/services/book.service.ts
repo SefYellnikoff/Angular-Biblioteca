@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../models/Book';
 import { of, Observable } from 'rxjs';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
-  
-  var books = [
+
+const BOOKS: Book[] = [
   {
     isbn: '1234',
     title: 'King Lear',
@@ -45,18 +46,23 @@ import { of, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BookService {
-  book: Book;
-  selectedBook :Book;
+  books: Book[];
+  selectedBook: Book;
 
-  constructor() { }
 
-  getBooks(): Observable <Book[]> {
-    return of(books);
+  constructor(private localStorage: LocalStorageService) { }
+
+  getBooks(): Observable<Book[]> {
+    this.books = this.localStorage.retrieve('books') || BOOKS;
+    return of(this.books);
   }
 
   addBook(book: Book): void {
-    books.push(book);
+    this.books.push(book);
+    this.saveBooksInLocalStorage();
   }
-  
-   
+
+  saveBooksInLocalStorage() {
+    this.localStorage.store('books', this.books);
+  }
 }
